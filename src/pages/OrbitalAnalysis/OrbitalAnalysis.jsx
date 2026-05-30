@@ -84,8 +84,7 @@ export default function OrbitalAnalysis() {
           <div className={styles.devBanner}>
             <HiOutlineInformationCircle className={styles.devIcon} />
             <span>
-              Funcionalidade em desenvolvimento — integração orbital real será implementada
-              futuramente.
+              Funcionalidade em desenvolvimento — a integração com satélites reais ainda não está disponível. Clique em "Iniciar Análise" para executar uma demonstração do fluxo de análise orbital.
             </span>
           </div>
         </div>
