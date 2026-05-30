@@ -1,0 +1,49 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  user-select: none;
+}
+
+.icon {
+  object-fit: contain;
+}
+
+/* TEXTO */
+.text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.text strong {
+  font-weight: 700;
+}
+
+/* TAMANHOS */
+
+.sm .text {
+  font-size: 18px;
+}
+
+.md .text {
+  font-size: 26px;
+}
+
+.lg .text {
+  font-size: 36px;
+}
+
+.sm {
+  gap: 10px;
+}
+
+.md {
+  gap: 14px;
+}
+
+.lg {
+  gap: 18px;
+}
