@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { HiArrowLeft, HiOutlineInformationCircle } from 'react-icons/hi2'
 import { TbSatellite } from 'react-icons/tb'
+import { useAuth } from '../../context/AuthContext'
+import { areasMonitoradas } from '../../data/data'
 import styles from './NewArea.module.css'
 
 const ESTADOS = [
@@ -13,12 +15,13 @@ const BIOMAS = ['Amazônia','Caatinga','Cerrado','Mata Atlântica','Pampa','Pant
 
 export default function NewArea() {
   const navigate = useNavigate()
+  const { currentOrg } = useAuth()
   const [form, setForm] = useState({
     nome: '',
     estado: '',
     bioma: '',
-    tamanho: '',
-    objetivo: '',
+    tamanhoHectares: '',
+    objetivoMonitoramento: '',
   })
   const [submitted, setSubmitted] = useState(false)
 
@@ -28,6 +31,18 @@ export default function NewArea() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const novaArea = {
+      id: areasMonitoradas.length + 1,
+      idOrganizacao: currentOrg?.id || null,
+      nome: form.nome,
+      estado: form.estado,
+      bioma: form.bioma,
+      tamanhoHectares: Number(form.tamanhoHectares),
+      objetivoMonitoramento: form.objetivoMonitoramento,
+      status: 'Aguardando análise orbital',
+      imagem: null,
+    }
+    areasMonitoradas.push(novaArea)
     setSubmitted(true)
     setTimeout(() => navigate('/dashboard'), 2000)
   }
@@ -105,10 +120,10 @@ export default function NewArea() {
                 <label className={styles.label}>Tamanho (hectares) *</label>
                 <input
                   type="number"
-                  name="tamanho"
+                  name="tamanhoHectares"
                   className={styles.input}
                   placeholder="Ex: 500"
-                  value={form.tamanho}
+                  value={form.tamanhoHectares}
                   onChange={handleChange}
                   min={1}
                   required
@@ -118,10 +133,10 @@ export default function NewArea() {
               <div className={styles.field}>
                 <label className={styles.label}>Objetivo do monitoramento</label>
                 <textarea
-                  name="objetivo"
+                  name="objetivoMonitoramento"
                   className={styles.textarea}
                   placeholder="Descreva o objetivo do monitoramento desta área..."
-                  value={form.objetivo}
+                  value={form.objetivoMonitoramento}
                   onChange={handleChange}
                   rows={4}
                 />

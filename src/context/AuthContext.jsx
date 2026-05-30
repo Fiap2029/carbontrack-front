@@ -32,7 +32,7 @@ export function AuthProvider({ children }) {
     const newOrg = {
       id: Date.now(),
       nome: dados.nome,
-      tipo: 'Organização',
+      tipo: dados.tipo,
       cnpj: dados.cnpj,
       email: dados.email,
       senha: dados.senha,
@@ -40,6 +40,7 @@ export function AuthProvider({ children }) {
       iniciais: dados.nome.substring(0, 2).toUpperCase(),
       cor: '#2563FF',
     }
+    organizacoes.push(newOrg)
     setCurrentOrg(newOrg)
     localStorage.setItem('carbontrack_org', JSON.stringify(newOrg))
     return { success: true }

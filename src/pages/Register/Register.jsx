@@ -7,7 +7,9 @@ import logo from '../../assets/logo.png'
 import styles from './Register.module.css'
 
 const TIPOS_ORGANIZACAO = [
+  'Fazenda',
   'ONG Ambiental',
+  'Governo',
   'Empresa Privada',
   'Órgão Governamental',
   'Instituição de Pesquisa',
