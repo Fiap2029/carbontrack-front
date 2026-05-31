@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { TbSatellite, TbRadar, TbSignalH } from 'react-icons/tb'
 import {
   HiOutlineCheckCircle,
   HiOutlineArrowPath,
   HiOutlineInformationCircle,
+  HiArrowLeft,
 } from 'react-icons/hi2'
 import styles from './OrbitalAnalysis.module.css'
 
@@ -16,6 +18,7 @@ const STEPS = [
 ]
 
 export default function OrbitalAnalysis() {
+  const navigate = useNavigate()
   const [running, setRunning] = useState(false)
   const [step, setStep] = useState(-1)
   const [progress, setProgress] = useState(0)
@@ -67,6 +70,10 @@ export default function OrbitalAnalysis() {
 
   return (
     <div className={styles.page}>
+      <button className={styles.backBtn} onClick={() => navigate(-1)}>
+        <HiArrowLeft />
+        Voltar
+      </button>
       <div className={styles.heroCard}>
         <div className={styles.iconArea}>
           <div className={`${styles.orbitRing} ${running ? styles.spinning : ''}`}>

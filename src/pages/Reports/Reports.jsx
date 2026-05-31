@@ -4,6 +4,7 @@ import {
   HiOutlineDocumentArrowDown,
   HiOutlineDocumentText,
   HiChevronRight,
+  HiArrowLeft,
 } from 'react-icons/hi2'
 import { useAuth } from '../../context/AuthContext'
 import {
@@ -30,6 +31,10 @@ export default function Reports() {
 
   return (
     <div className={styles.page}>
+      <button className={styles.backBtn} onClick={() => navigate(-1)}>
+        <HiArrowLeft />
+        Voltar
+      </button>
       <div className={styles.pageHeader}>
         <div>
           <h2 className={styles.pageTitle}>Relatórios Ambientais</h2>

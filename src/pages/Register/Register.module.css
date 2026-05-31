@@ -242,6 +242,37 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: #f87171;
+  margin: 0;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath fill='%23ffffff' fill-opacity='0.45' d='M0 0l6 6 6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.select option {
+  background-color: #031633;
+  color: white;
+}
+
+.selectPlaceholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
 @media (max-width: 900px) {
   .body {
     flex-direction: column;

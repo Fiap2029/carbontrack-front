@@ -8,6 +8,8 @@
   gap: 16px;
   box-shadow: var(--card-shadow);
   transition: box-shadow var(--transition), transform var(--transition);
+  overflow: hidden;
+  min-width: 0;
 }
 
 .card:hover {
@@ -73,4 +75,27 @@
   color: var(--text-primary);
   line-height: 1.2;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .iconWrap {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .value {
+    font-size: 17px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
 }

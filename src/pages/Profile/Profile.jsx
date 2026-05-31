@@ -8,6 +8,7 @@ import {
   HiOutlineIdentification,
   HiOutlineEnvelope,
   HiOutlineCheckCircle,
+  HiArrowLeft,
   HiOutlinePlusCircle,
   HiOutlineTableCells,
   HiChevronRight,
@@ -43,6 +44,10 @@ export default function Profile() {
 
   return (
     <div className={styles.page}>
+      <button className={styles.backBtn} onClick={() => navigate(-1)}>
+        <HiArrowLeft />
+        Voltar
+      </button>
       <div className={styles.mainGrid}>
         {/* Left: Profile info + metrics + areas */}
         <div className={styles.leftCol}>
