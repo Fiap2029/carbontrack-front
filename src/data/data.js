@@ -14,8 +14,6 @@ export const organizacoes = [
     email: 'fazenda@carbontrack.com',
     senha: 'F123456',
     statusConta: 'Ativa',
-    iniciais: 'FV',
-    cor: '#166534',
   },
   {
     id: 2,
@@ -25,8 +23,6 @@ export const organizacoes = [
     email: 'ong@carbontrack.com',
     senha: 'O123456',
     statusConta: 'Ativa',
-    iniciais: 'IV',
-    cor: '#1e3a5f',
   },
   {
     id: 3,
@@ -36,8 +32,6 @@ export const organizacoes = [
     email: 'governo@carbontrack.com',
     senha: 'S123456',
     statusConta: 'Ativa',
-    iniciais: 'SA',
-    cor: '#4c1d95',
   },
 ];
 

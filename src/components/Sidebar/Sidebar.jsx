@@ -47,11 +47,8 @@ export default function Sidebar({ isOpen, onClose }) {
       <div className={styles.footer}>
         {currentOrg && (
           <div className={styles.userRow}>
-            <div
-              className={styles.avatar}
-              style={{ background: currentOrg.cor || '#1e3a5f' }}
-            >
-              {currentOrg.iniciais}
+            <div className={styles.avatar}>
+              {currentOrg.nome?.substring(0, 2).toUpperCase()}
             </div>
             <span className={styles.userName}>{currentOrg.nome}</span>
           </div>

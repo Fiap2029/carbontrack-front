@@ -49,11 +49,8 @@ export default function Profile() {
           {/* Org card */}
           <div className={styles.orgCard}>
             <div className={styles.orgHeader}>
-              <div
-                className={styles.orgAvatar}
-                style={{ background: currentOrg?.cor || '#1e3a5f' }}
-              >
-                {currentOrg?.iniciais}
+              <div className={styles.orgAvatar}>
+                {currentOrg?.nome?.substring(0, 2).toUpperCase()}
               </div>
               <div>
                 <h2 className={styles.orgName}>{currentOrg?.nome}</h2>

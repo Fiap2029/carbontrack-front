@@ -37,8 +37,6 @@ export function AuthProvider({ children }) {
       email: dados.email,
       senha: dados.senha,
       statusConta: 'Ativa',
-      iniciais: dados.nome.substring(0, 2).toUpperCase(),
-      cor: '#2563FF',
     }
     organizacoes.push(newOrg)
     setCurrentOrg(newOrg)
