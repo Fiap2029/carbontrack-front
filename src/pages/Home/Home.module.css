@@ -1,51 +1,88 @@
-.page {
-  min-height: 100vh;
+.div_structure{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-main);
+  gap: 40px;
 }
 
-.card {
+.background{
+  min-height: 100vh;
+  background: linear-gradient(140deg, #010d1f 0%, #031633 45%, #04193a 100%);
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.glow {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 255, 0.14) 0%,
+    rgba(37, 99, 255, 0.06) 35%,
+    transparent 68%
+  );
+  top: 50%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.nav{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.image{
+  display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 48px 40px;
-  background: var(--bg-white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--card-shadow);
-  text-align: center;
-  max-width: 420px;
-  width: 100%;
+  margin-left: 25px;
 }
 
-.title {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin: 0;
+.image img{
+  width: 100px;
+  height: 100px;
 }
 
-.subtitle {
-  font-size: 14px;
-  color: var(--text-secondary);
-  margin: 0;
+.image span{
+  font-family: inherit;
+  color: #fff;
 }
 
-.btn {
-  margin-top: 8px;
-  padding: 11px 28px;
-  background: var(--primary);
-  color: white;
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background var(--transition);
+.menu{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #858585;
+  cursor: pointer;
 }
 
-.btn:hover {
-  background: var(--primary-hover);
+.menu a:hover{
+  color: #fff;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.button button{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button button:hover{
+  background-color: #fff;
+  color: #04193a;
 }
