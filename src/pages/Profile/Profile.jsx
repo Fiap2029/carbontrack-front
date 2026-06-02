@@ -104,7 +104,7 @@ export default function Profile() {
             />
             <MetricCard
               icon={<HiOutlineExclamationTriangle />}
-              label="Alertas em análise"
+              label="Alertas ativos"
               value={metricas.alertasAnalise ?? 0}
               color="orange"
             />
