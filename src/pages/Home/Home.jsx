@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faLeaf  } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faLeaf, faTableColumns, faLocationDot, faBell, faSatellite, faFilePen, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 
@@ -51,7 +51,70 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </div>
 
+      <div className={styles.features}>
+        <div>
+          <h5>Funcionalidades</h5>
+          <h4 className={styles.informations_subtitle}>Tudo que você precisa pra monitorar</h4>
+          <p className={styles.features_description}>Do cadastro de áreas aos alertas automáticos, o CarbonTrack Space centraliza o monitoramento 
+            ambiental em um único lugar.
+          </p>
+        </div>
+
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faTableColumns} className={styles.icon}/>
+              <h6 className={styles.card_title}>Dashboard Ambiental</h6>
+              <p>Painel com métricas em tempo real: áreas monitoradas, índice verde médio, carbono preservado 
+                e alertas ativos.
+              </p>
+            </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faLocationDot} className={styles.icon}/>
+              <h6 className={styles.card_title}>Áreas Monitoradas</h6>
+              <p>Cadastre e acompanhe reservas, fazendas e corredores ecológicos com status e análise por bioma.</p>
+            </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faBell} className={styles.icon}/>
+              <h6 className={styles.card_title}>Alertas Ambientais</h6>
+              <p>Receba alertas automáticos de desmatamento, risco de queimada e degradação detectados via 
+                dados orbitais.
+              </p>
+            </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faSatellite} className={styles.icon}/>
+              <h6 className={styles.card_title}>Análise Orbital</h6>
+              <p>Dados simulados de satélite com cobertura vegetal, índice NDVI e variação histórica por área.</p>
+            </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faFilePen} className={styles.icon}/>
+              <h6 className={styles.card_title}>Relatórios em PDF</h6>
+              <p>Exporte relatórios completos das áreas monitoradas para apoiar decisões e auditorias ambientais. </p>
+            </a>
+          </div>
+
+          <div className={styles.card}>
+            <a href="#">
+              <FontAwesomeIcon icon={faUserGroup} className={styles.icon}/>
+              <h6 className={styles.card_title}>Perfis por organização</h6>
+              <p>Login separado para Fazendas, ONGs e Governo, com dados e áreas filtradas por organização.</p>
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* <div className={styles.card}>
