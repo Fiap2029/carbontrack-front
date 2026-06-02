@@ -40,9 +40,9 @@ export default function Login() {
       <div className={styles.glow} />
 
       <nav className={styles.nav}>
-        <div className={styles.navLogo}>
+        <Link to="/" className={styles.navLogo}>
           <img src={logo} alt="CarbonTrack Space" className={styles.logoImg} />
-        </div>
+        </Link>
         <div className={styles.navActions}>
           <Link to="/login" className={`${styles.navBtn} ${styles.navBtnActive}`}>
             Entrar
