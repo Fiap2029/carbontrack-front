@@ -64,22 +64,6 @@ export default function Home() {
               fazendas e governo acompanharem áreas protegidas, receberem alertas e tomarem
               decisões baseadas em dados.
             </p>
-            <div className={styles.hero_stats}>
-              <div className={styles.stat}>
-                <span className={styles.stat_number}>150+</span>
-                <span className={styles.stat_label}>Áreas Monitoradas</span>
-              </div>
-              <div className={styles.stat_divider} />
-              <div className={styles.stat}>
-                <span className={styles.stat_number}>98%</span>
-                <span className={styles.stat_label}>Cobertura Preservada</span>
-              </div>
-              <div className={styles.stat_divider} />
-              <div className={styles.stat}>
-                <span className={styles.stat_number}>500+</span>
-                <span className={styles.stat_label}>Alertas Processados</span>
-              </div>
-            </div>
             <div className={styles.hero_buttons}>
               <Link to="/register" className={styles.btn_primary}>
                 Começar Agora
