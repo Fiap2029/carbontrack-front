@@ -1280,12 +1280,17 @@
 ══════════════════════════════════════════════ */
 @media (max-width: 600px) {
   .nav {
-    padding: 0 20px;
-    height: 60px;
+    padding: 0 16px;
+    height: 56px;
   }
 
   .nav_menu {
     display: none;
+  }
+
+  .nav_brand img {
+    height: 28px;
+    width: auto;
   }
 
   .nav_brand span {
@@ -1294,8 +1299,13 @@
 
   .btn_primary,
   .btn_ghost {
-    padding: 9px 16px;
-    font-size: 13px;
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .btn_primary svg,
+  .btn_ghost svg {
+    display: none;
   }
 
   .hero {

@@ -96,10 +96,6 @@ export default function Home() {
             <div className={styles.dashboard_mock}>
               <div className={styles.dashboard_header}>
                 <span className={styles.dashboard_title}>Dashboard Ambiental</span>
-                <span className={styles.live_badge}>
-                  <span className={styles.live_dot} />
-                  Live
-                </span>
               </div>
               <div className={styles.dashboard_stats}>
                 <div className={styles.dash_stat}>

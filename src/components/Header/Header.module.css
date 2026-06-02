@@ -18,6 +18,12 @@
   align-items: center;
   gap: 14px;
   min-width: 0;
+  overflow: hidden;
+}
+
+.greetingWrap {
+  min-width: 0;
+  overflow: hidden;
 }
 
 .menuBtn {

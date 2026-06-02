@@ -284,3 +284,22 @@
   .heroTitle { font-size: 28px; }
   .formArea { max-width: 100%; }
 }
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 16px 20px;
+  }
+
+  .logoImg {
+    height: 32px;
+  }
+
+  .navBtn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+}

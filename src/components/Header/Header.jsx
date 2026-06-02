@@ -35,7 +35,7 @@ export default function Header({ onMenuClick }) {
         <button className={styles.menuBtn} onClick={onMenuClick} aria-label="Menu">
           <HiBars3 />
         </button>
-        <div>
+        <div className={styles.greetingWrap}>
           <h1 className={styles.greeting}>
             Olá, {currentOrg?.nome || 'Organização'}
           </h1>
