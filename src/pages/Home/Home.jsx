@@ -38,8 +38,9 @@ export default function Home() {
           <div>
             <h1 className={styles.informations_title}>Proteja o meio ambiente com</h1>
             <h1 className={styles.informations_subtitle}>inteligência orbital</h1>
-            <p className={styles.informations_description}>Plataforma web para monitoramento ambiental em tempo real — criada para ONGs, fazendas e 
-              governo acompanharem áreas protegidas, receberem alertas e tomarem decisões baseadas em dados.
+            <p className={styles.informations_description}>Plataforma web para monitoramento ambiental em tempo
+              real — criada para ONGs, fazendas e governo acompanharem áreas protegidas, receberem alertas e 
+              tomarem decisões baseadas em dados.
             </p>
           </div>
 
@@ -115,6 +116,52 @@ export default function Home() {
             </a>
           </div>
         </div>
+      </div>
+
+      <div className={styles.features}>
+        <div>         
+          <h5 className={styles.informations_subtitle}>Quem somos nós</h5>
+          <p className={styles.informations_description}>O CarbonTrack Space nasceu para tornar o monitoramento ambiental mais acessível, preciso e 
+            eficiente — conectando dados orbitais simulados a decisões reais de preservação.
+          </p>
+        </div>
+
+        <div className={styles.quote}>
+          <p>"Nossa missão é empoderar organizações, ONGs, fazendas e o governo com informações ambientais 
+            em tempo real — para que a preservação do planeta seja baseada em dados, não em suposições."
+          </p>
+        </div>
+
+        <div className={styles.horizontal_card}>
+          <div className={styles.organization_card}>
+            <h6 className={styles.informations_subtitle}>Nossa visão</h6>
+            <p>Ser a principal plataforma de monitoramento ambiental por dados orbitais do Brasil, conectando
+                ciência e preservação em um ecossistema digital.
+            </p>
+          </div>
+
+          <div className={styles.organization_card}>
+            <h6 className={styles.informations_subtitle}>Nossa missão</h6>
+            <p>Democratizar o acesso a dados ambientais de qualidade, permitindo que qualquer organização 
+              monitore e proteja áreas naturais com eficiência.
+            </p>
+          </div>
+
+          <div className={styles.organization_card}>
+            <h6 className={styles.informations_subtitle}>Nossos valores</h6>
+            <p>Transparência nos dados, compromisso com a preservação ambiental, inovação tecnológica e 
+              responsabilidade com o futuro do planeta.
+            </p>
+          </div>
+
+          <div className={styles.organization_card}>
+            <h6 className={styles.informations_subtitle}>Nossa tecnologia</h6>
+            <p>Dados orbitais simulados combinados com indicadores como NDVI, cobertura vegetal e risco de 
+              queimada para gerar alertas precisos.
+            </p>
+          </div>
+        </div>
+
       </div>
 
       {/* <div className={styles.card}>
