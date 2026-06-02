@@ -12,7 +12,7 @@ export default function Home() {
           <div className={styles.div_structure}>
             <a className={styles.image} href="#">
               <img src="/src/assets/icon-carbontracker.svg" alt="Logo" />
-              <span>CarbonTracker Space</span>
+              <span>CarbonTrack Space</span>
             </a>
 
               <div className={styles.menu}>

@@ -4,7 +4,7 @@
 }
 
 .background{
-  height: 580px;
+  min-height: 580px;
   background: linear-gradient(140deg, #010d1f 0%, #031633 45%, #04193a 100%);
   position: relative;
   overflow: hidden;
@@ -85,6 +85,8 @@
   border: 1px solid #fff;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .button:hover{
@@ -99,6 +101,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 650px;
+  max-width: 100%;
   height: 400px;
   margin-left: 45px;
   padding: 20px;
@@ -109,7 +112,8 @@
   flex-direction: row;
   align-items: center;
   width: 390px;
-  gap: 10px ;
+  max-width: 100%;
+  gap: 10px;
   padding: 5px;
   border-radius: 10px;
   color: #476bad;
@@ -162,13 +166,13 @@
 .cards{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
-  height: 300px;
   margin-top: 30px;
 }
 
 .card{
-  width: 250px;
+  flex: 1 1 220px;
   padding: 20px 10px;
   border: 1px solid #858585;
   border-radius: 10px;
@@ -186,7 +190,8 @@
   padding: 10px;
   margin: 0;
   height: 20px;
-  width: 20px;color: #072352;
+  width: 20px;
+  color: #072352;
   background-color: #31456869;
   border-radius: 10px;
 }
@@ -216,11 +221,12 @@
 
 .horizontal_card{
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  height: 200px;
 }
 
 .organization_card{
+  flex: 1 1 180px;
   padding: 20px;
   border: 1px solid #858585;
   border-radius: 10px;
@@ -231,18 +237,21 @@
 
 .profiles{
   display: flex;
+  align-items: stretch;
   gap: 15px;
   padding: 30px;
   margin: 30px 0;
 }
 
 .profiles_text{
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .board{
+  flex: 1;
   padding: 20px;
   border: 1px solid #858585;
   border-radius: 10px;
@@ -252,7 +261,7 @@
 }
 
 .footer{
-  height: 250px;
+  min-height: 250px;
   background: linear-gradient(140deg, #010d1f 0%, #031633 45%, #04193a 100%);
   position: relative;
   overflow: hidden;
@@ -266,17 +275,19 @@
 }
 
 .footer_structure{
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
-  height: 100%;
+  height: 250px;
 }
 
 .footer_buttons{
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 }
 
 .footer_text{
@@ -285,4 +296,163 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+/* ── TABLET (max 900px) ── */
+@media (max-width: 900px) {
+  .div_structure {
+    gap: 16px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .informations {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 24px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .informations_card {
+    width: 100%;
+  }
+
+  .cards {
+    height: auto;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 15px);
+  }
+
+  .horizontal_card {
+    height: auto;
+  }
+
+  .organization_card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .profiles {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .profiles_text {
+    gap: 12px;
+  }
+
+  .footer_structure {
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .footer_buttons {
+    gap: 16px;
+  }
+}
+
+/* ── MOBILE (max 600px) ── */
+@media (max-width: 600px) {
+  .nav {
+    padding: 0 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .div_structure {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .image {
+    margin-left: 8px;
+  }
+
+  .image img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav_button {
+    margin-right: 8px;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .background {
+    min-height: auto;
+    padding-bottom: 32px;
+  }
+
+  .informations {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .informations_card {
+    font-size: 13px;
+  }
+
+  .informations_title {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .informations_subtitle {
+    font-size: 18px;
+  }
+
+  .features {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .horizontal_card {
+    flex-direction: column;
+  }
+
+  .organization_card {
+    flex: 1 1 100%;
+  }
+
+  .profiles {
+    padding: 0;
+    margin: 16px 0;
+  }
+
+  .board {
+    padding: 16px;
+  }
+
+  .footer_structure {
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .footer_buttons {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .footer_text h2 {
+    font-size: 20px;
+    text-align: center;
+  }
 }
