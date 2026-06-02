@@ -66,14 +66,14 @@
   color: #fff;
 }
 
-.button{
+.nav_button{
   display: flex;
   align-items: center;
   justify-content: flex-end;
   margin-right: 25px;
 }
 
-.button button{
+.button{
   padding: 10px;
   border-radius: 10px;
   background-color: transparent;
@@ -82,7 +82,67 @@
   cursor: pointer;
 }
 
-.button button:hover{
+.button:hover{
   background-color: #fff;
   color: #04193a;
+}
+
+.informations{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 650px;
+  height: 400px;
+  margin-left: 45px;
+  padding: 20px;
+}
+
+.informations_card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 390px;
+  gap: 10px ;
+  padding: 5px;
+  border-radius: 10px;
+  color: #476bad;
+  background-color: #072352;
+  border: 1px solid #3c5a92;
+}
+
+.informations_title{
+  margin-top: 20px;
+  color: #fff;
+}
+
+.informations_subtitle{
+  color: #476bad;
+  font-weight: bold;
+}
+
+.informations_description{
+  margin-top: 20px;
+  color: #858585;
+}
+
+.text{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #858585;
+  padding-left: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.text:hover{
+  color: #fff;
+}
+
+.informations_buttons{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
