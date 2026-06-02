@@ -301,7 +301,6 @@ export default function Home() {
           <div className={styles.footer_grid}>
             <div className={styles.footer_brand}>
               <div className={styles.footer_logo}>
-                <img src={logo} alt="Logo" />
                 <span>CarbonTrack Space</span>
               </div>
               <p className={styles.footer_brand_desc}>
