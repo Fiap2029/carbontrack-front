@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+import demoVideo from '../../assets/demo-carbontrack.mp4';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -342,17 +343,16 @@ export default function Home() {
                 <FontAwesomeIcon icon={faSatellite} />
                 CarbonTrack Space
               </span>
-              <h3 className={styles.modal_title}>Pitch da Plataforma</h3>
-              <p className={styles.modal_subtitle}>Veja como o CarbonTrack Space transforma dados orbitais em ações de preservação.</p>
+              <h3 className={styles.modal_title}>Conheça o CarbonTrack Space</h3>
+              <p className={styles.modal_subtitle}>Veja como a tecnologia pode antecipar riscos ambientais e ajudar organizações a proteger áreas naturais com mais precisão.</p>
             </div>
             <div className={styles.modal_video}>
-              <div className={styles.video_placeholder}>
-                <div className={styles.video_play_btn}>
-                  <FontAwesomeIcon icon={faPlay} />
-                </div>
-                <span className={styles.video_coming}>Vídeo em breve</span>
-                <span className={styles.video_hint}>O pitch será hospedado aqui em breve.</span>
-              </div>
+              <video
+                src={demoVideo}
+                controls
+                autoPlay
+                className={styles.video_player}
+              />
             </div>
           </div>
         </div>
